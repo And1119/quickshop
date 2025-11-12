@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QuickShop | Tienda en línea</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>QuickShop</h1>
+    <nav class="nav">
+      <a href="#" id="logout">Cerrar sesión</a>
+      <a href="./carrito.html" id="ver-carrito">Ver carrito</a>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <!-- Catálogo -->
+    <section>
+      <h2>Catálogo</h2>
+      <div id="catalogo-productos" class="grid"></div>
+    </section>
+
+    <!-- Carrito lateral (vista rápida) -->
+    <aside>
+      <h2>Carrito</h2>
+      <div id="carrito" class="carrito">
+        <p class="muted">Tu carrito está vacío.</p>
+        <div class="carrito-total">
+          <span>Total:</span>
+          <strong id="carrito-total">$0.00</strong>
+        </div>
+        <button id="btn-vaciar" class="btn btn-danger" type="button">Vaciar carrito</button>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <small>Proyecto Final — QuickShop</small>
+  </footer>
+
+  <script src="./app.js" type="module"></script>
+</body>
+</html>

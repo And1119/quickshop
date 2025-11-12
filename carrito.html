@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tu carrito | QuickShop</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>QuickShop</h1>
+    <nav class="nav">
+      <a href="./index.html">Seguir comprando</a>
+      <a href="#" id="logout">Cerrar sesión</a>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <section style="grid-column:1 / -1">
+      <h2>Tu carrito</h2>
+
+      <div id="carrito-lista" class="card" style="padding:0"></div>
+
+      <div class="card" style="margin-top:16px">
+        <div class="carrito-total">
+          <span>Total:</span>
+          <strong id="carrito-total">$0.00</strong>
+        </div>
+        <div style="display:flex; gap:10px; margin-top:12px">
+          <button id="btn-vaciar" class="btn btn-danger" type="button">Vaciar carrito</button>
+          <button id="btn-pagar" class="btn" type="button">Finalizar compra</button>
+        </div>
+        <p id="msg" class="muted" style="margin-top:8px"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Proyecto Final — QuickShop</small>
+  </footer>
+
+  <script src="./checkout.js" type="module"></script>
+</body>
+</html>
