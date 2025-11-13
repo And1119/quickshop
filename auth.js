@@ -31,7 +31,6 @@ form.addEventListener('submit', async (e) => {
   }
 });
 
-// Si ya hay token, redirige al home
 window.addEventListener('DOMContentLoaded', () => {
   if (localStorage.getItem('token')) {
     window.location.href = './index.html';

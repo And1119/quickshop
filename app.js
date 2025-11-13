@@ -1,4 +1,3 @@
-// Protección de sesión
 if (!localStorage.getItem('token')) {
   window.location.href = './login.html';
 }
@@ -104,14 +103,13 @@ async function cargarProductos() {
 }
 
 function bindUI() {
-  // Vaciar carrito (vista lateral)
+
   document.getElementById('btn-vaciar')?.addEventListener('click', () => {
     carrito.items = [];
     carrito.guardar();
     carrito.renderizarCarrito();
   });
 
-  // Añadir al carrito desde tarjetas
   document.getElementById('catalogo-productos').addEventListener('click', e => {
     const btn = e.target.closest('.btn-add');
     if (!btn) return;
@@ -120,7 +118,6 @@ function bindUI() {
     if (p) carrito.agregarItem(p);
   });
 
-  // Controles del carrito (+, −, 🗑️) en vista lateral
   document.getElementById('carrito').addEventListener('click', e => {
     const btn = e.target.closest('button[data-action]');
     if (!btn) return;
